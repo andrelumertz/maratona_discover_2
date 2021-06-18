@@ -33,14 +33,14 @@ await db.run(`INSERT INTO profile (
     vacation_per_year,
     value_hour
  ) VALUES (
-     "jakeliny",
-     "https://avatars.githubusercontent.com/u/17316392",
+     "André",
+     "https://avatars.githubusercontent.com/u/69599938?v=4",
      3000,
      5,
      5,
      4,
      70
-);`)
+);`);
 
 await db.run(`INSERT INTO jobs (
     name, 
