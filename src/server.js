@@ -1,17 +1,21 @@
-const express = require("express")  // esta chamando o pacote express
-const server = express()  // express é um tipo de função e ele esta sendo executado
-const routes = require("./routes");
+const express = require("express")
+const server = express()
+const routes = require("./routes")
+const path = require("path")
 
-server.set('view engine', 'ejs')
+// usando template engine
+server.set('view engine',  'ejs')
 
+// Mudar a localização da pasta views
+server.set('views', path.join(__dirname, 'views'))
 
-// habilitar arquivos estaticos
-server.use(express.static("public")) // criando rotas automaticas, o use() é uma função que tbm serve para adicionar rotas ao servidor.
+//habilitar arquivos statics
+server.use(express.static("public"))
 
+// usar o req.body
+server.use(express.urlencoded({ extended: true }))
 
-// routes arquivos
+// routes
 server.use(routes)
 
-
-server.listen(3000, () => console.log('rodando'))  // o server esta ouvindo a porta 3000 e executando uma funçao anonima que retorna o console.log
-
+server.listen(3000, () => console.log('rodando'))

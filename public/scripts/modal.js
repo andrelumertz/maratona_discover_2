@@ -2,13 +2,9 @@ export default function Modal({ animateClasses = [] }) {
 
   const wrapper = document.querySelector('.modal-wrapper');
   const element = document.querySelector('.modal');
-  const cancelButton = document.querySelector("footer.button:nth-child(1)");
-  const deleteBotao = document.querySelector('#delete-job');
+  const cancelButton = element.querySelector("footer .button:nth-child(1)")
 
- document.querySelector('.cancelButton').addEventListener('click', close)
- document.querySelector('.deleteBotao').addEventListener('click', close)
- document.querySelector(".deletarbutton").addEventListener("click", close)
-
+  cancelButton.addEventListener('click', close)
 
   function open() {
     document.addEventListener('keydown', closeOnEscape)

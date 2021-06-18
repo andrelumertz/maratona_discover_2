@@ -28,7 +28,7 @@ button.button {
 }
 
 .button.orange:hover {
-  background: var(--color-secondary-hover);
+  background: #FA9C2D
 }
 
 .button.green {
